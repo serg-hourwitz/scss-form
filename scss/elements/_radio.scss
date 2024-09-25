@@ -1,0 +1,31 @@
+// * radio buttons
+
+#male,
+#female {
+  display: none;
+}
+
+.sex-label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 20px;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--c-grey-middle);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+input[type="radio"]:checked+.sex-label:before {
+  background: url(./scss/assets/radio-button.png);
+}

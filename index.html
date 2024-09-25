@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      rel="shortcut icon"
+      href="../../favicon/favicon.ico"
+      type="image/x icon"
+    />
+    <!-- * Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- * Styles -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- * Main -->
+      <main class="main">
+        <div class="wrapper main-wrapper">
+          <div class="container forms-container">
+            <div class="left-form-block block">
+              <!-- form left -->
+              <h1 class="form-title">Create an Account</h1>
+              <form method="post" class="form form-left" id="js-form-left">
+                <!-- top -->
+                <div class="personal-data">
+                  <!-- first name -->
+                  <label class="fname-label">
+                    <div class="input-name">First Name</div>
+                    <input
+                      type="text"
+                      name="fname"
+                      id="fname"
+                      class="input-field"
+                      value=""
+                    />
+                    <div class="error" id="js-left-form-fname-error"></div>
+                  </label>
+                  <!-- last name -->
+                  <label class="lname-label">
+                    <div class="input-name">Last Name</div>
+                    <input
+                      type="text"
+                      value=""
+                      name="lname"
+                      id="lname"
+                      class="input-field"
+                    />
+                    <div class="error" id="js-left-form-lname-error"></div>
+                  </label>
+                  <!-- email -->
+                  <label class="email-label">
+                    <div class="input-name">E-mail</div>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      value=""
+                      class="input-field"
+                    />
+                    <div class="error" id="js-left-form-email-error"></div>
+                  </label>
+                  <span class="text"
+                    >We'll never share your email with anyone else.</span
+                  >
+                </div>
+                <!-- gender -->
+                <div class="sex-choice">
+                  <input
+                    type="radio"
+                    name="sex"
+                    id="male"
+                    value="male"
+                    checked
+                  />
+                  <label for="male" class="sex-label">
+                    <div class="input-name input-sex">Male</div>
+                  </label>
+                  <input type="radio" name="sex" id="female" value="female" />
+                  <label for="female" class="sex-label">
+                    <div class="input-name input-sex">Female</div>
+                  </label>
+                </div>
+                <!-- location -->
+                <div class="location">
+                  <!-- country -->
+                  <label class="label">
+                    <div class="input-name">Country</div>
+                    <div class="select-arrow-icon-wrapper">
+                      <img
+                        class="select-arrow-icon"
+                        src="./scss/assets/arrows.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <select name="country" id="country" class="select">
+                      <option value="Select" selected>Select</option>
+                      <option value="Ukraine">Ukraine</option>
+                      <option value="Another" disabled>Another</option>
+                    </select>
+                    <div class="error" id="js-left-form-country-error"></div>
+                  </label>
+                  <!-- city -->
+                  <label class="label">
+                    <div class="input-name">City</div>
+                    <input
+                      type="text"
+                      name="city"
+                      id="city"
+                      value=""
+                      class="input-field"
+                    />
+                    <div class="error" id="js-left-form-city-error"></div>
+                  </label>
+                  <!-- button -->
+                  <button
+                    class="sign-up-btn btn"
+                    type="submit"
+                    id="js-sign-up-btn"
+                  >
+                    <span>Sign Up</span>
+                  </button>
+                  <div class="sign-up-button-text">
+                    By clicking the 'Sign Up' button, you confirm that you
+                    <span><a href="#" class="text-link">Terms of Use</a></span>
+                    accept our and
+                    <span><a href="#" class="text-link">Privacy Policy</a></span
+                    >.
+                  </div>
+                </div>
+              </form>
+              <!-- * Footer -->
+              <div class="form-left-footer">
+                <span class="form-left-footer-text">Have an account?</span>
+                <a href="#" class="form-left-footer-link">Log In</a>
+              </div>
+            </div>
+            <!-- * form right -->
+            <div class="right-form-block block">
+              <h1 class="form-title">Profile</h1>
+              <form method="post" class="form form-right" id="js-form-right">
+                <!-- input file -->
+                <div class="form-right-file">
+                  <div class="photo-frame">
+                    <img src="./scss/assets/photo.png" alt="photo" />
+                  </div>
+                  <div class="label-wrapper">
+                    <label class="label label-file">
+                      <div class="select-file-container">
+                        <div
+                          class="select-file"
+                          id="js-right-form-file-error"
+                        ></div>
+                        <img
+                          class="select-file-img"
+                          src="./scss/assets/photo-camera.svg"
+                          alt="photo-camera"
+                        />
+                        <input
+                          type="file"
+                          class="input-file"
+                          name="file"
+                          id="file"
+                        />
+                      </div>
+                      <button class="button-reset" type="reset">
+                        <span>
+                          <svg
+                            class="button-reset-img"
+                            viewBox="0 0 10 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.00001 10.6667C1.00001 11.4 1.60001 12 2.33334 12H7.66668C8.40001 12 9.00001 11.4 9.00001 10.6667V2.66667H1.00001V10.6667ZM9.66668 0.666667H7.33334L6.66668 0H3.33334L2.66668 0.666667H0.333344V2H9.66668V0.666667Z"
+                            /></svg
+                        ></span>
+                      </button>
+                    </label>
+                    <div class="input-file-text">Up to 1 MB (300x300 px)</div>
+                  </div>
+                </div>
+                <div class="right-form-main-wrapper">
+                  <!-- name -->
+                  <label class="name-label">
+                    <div class="input-name">Name</div>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      value=""
+                      class="input-field"
+                    />
+                    <div class="error" id="js-right-form-name-error"></div>
+                  </label>
+                  <!-- email -->
+                  <label class="email-label-right">
+                    <div class="input-name">E-mail</div>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email-r"
+                      class="input-field"
+                    />
+                    <div class="error" id="js-right-form-email-error"></div>
+                  </label>
+                  <!-- country -->
+                  <label class="label">
+                    <div class="input-name">Country</div>
+                    <div class="select-arrow-icon-wrapper">
+                      <img
+                        class="select-arrow-icon"
+                        src="./scss/assets/arrows.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                    <select name="country" id="country-right" class="select">
+                      <option value="Select" selected>Select</option>
+                      <option value="Ukraine">Ukraine</option>
+                      <option value="Another" disabled>Another</option>
+                    </select>
+                    <div class="error" id="js-right-form-country-error"></div>
+                  </label>
+                  <!-- city -->
+                  <label class="label">
+                    <div class="input-name">City</div>
+                    <input
+                      type="text"
+                      name="city"
+                      id="city-right"
+                      class="input-field"
+                    />
+                    <div class="error" id="js-right-form-city-error"></div>
+                  </label>
+                  <!-- ZIP code -->
+                  <label class="label">
+                    <div class="input-name">Zip Code</div>
+                    <input
+                      type="number"
+                      name="zip"
+                      id="zip"
+                      class="input-field"
+                    />
+                    <div class="error" id="js-right-form-zip-error"></div>
+                  </label>
+                  <!-- Phone Number -->
+                  <label class="label">
+                    <div class="input-name">Phone Number</div>
+                    <input
+                      type="number"
+                      name="phone"
+                      id="phone"
+                      class="input-field"
+                    />
+                    <div class="error" id="js-right-form-phone-error"></div>
+                  </label>
+                  <!-- button update -->
+                  <button
+                    class="button-update btn"
+                    type="submit"
+                    id="js-update-btn"
+                  >
+                    <span>Update</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- * Scripts -->
+    <script type="module" defer src="./index.js"></script>
+  </body>
+</html>

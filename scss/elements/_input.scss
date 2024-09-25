@@ -1,0 +1,32 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-field {
+  height: 38px;
+  padding-left: 10px;
+  border: 1px solid var(--c-grey-middle);
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-field:focus,
+.select:focus {
+  border: 1px solid var(--c-blue);
+}
+
+.input-field:invalid {
+  border-color: red;
+
+  &+.error {
+    opacity: 1;
+  }
+}
+
+.input-name {
+  display: block;
+  font-size: var(--fs-middle);
+  color: var(--c-black-light);
+  margin-bottom: 7px;
+}
